@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-k8s
+  labels:
+    app: hello-k8s
+  annotations:
+    description: "Deployment for a hello-k8s app demonstrating labels vs. annotations"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-k8s
+  template:
+    metadata:
+      labels:
+        app: hello-k8s
+        environment: demo
+      annotations:
+        note: "This pod runs the hello-k8s container. Annotations here provide extra metadata not used for selection."
+    spec:
+      containers:
+      - name: hello-k8s
+        image: asruf/hello-k8s:latest
+        ports:
+        - containerPort: 80
+        limits:
+          

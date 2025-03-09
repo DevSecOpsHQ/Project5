@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-k8s-service
+  labels:
+    app: hello-k8s
+  annotations:
+    service-info: "Service exposing the hello-k8s deployment"
+spec:
+  selector:
+    app: hello-k8s
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30080
+  # type: LoadBalancer
