@@ -5,6 +5,7 @@ This repository provides a sample Kubernetes deployment and service for a simple
 ## Overview
 
 We use a hello-k8s container from Docker Hub (nginxdemos/hello:plain-text) to illustrate how to:
+
 - Use **labels** to identify and group resources.
 - Use **annotations** to store additional metadata that does not affect resource selection.
 

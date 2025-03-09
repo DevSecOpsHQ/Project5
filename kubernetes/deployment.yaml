@@ -23,6 +23,6 @@ spec:
       - name: hello-k8s
         image: asruf/hello-k8s:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         limits:
           

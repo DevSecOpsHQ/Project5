@@ -7,11 +7,13 @@ metadata:
   annotations:
     service-info: "Service exposing the hello-k8s deployment"
 spec:
+  type: NodePort
   selector:
     app: hello-k8s
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-    nodePort: 30080
-  # type: LoadBalancer
+    - port: 3000
+      protocol: TCP
+      targetPort: 3000
+      nodePort: 30080
+    # type: LoadBalancer
+
