@@ -33,20 +33,20 @@ We use a hello-k8s container from Docker Hub (nginxdemos/hello:plain-text) to il
 
 2. **Apply the Deployment Configuration:**
 
-```bash
-kubectl apply -f kubernetes/
-```
-<!-- This will create the Deployment and Service Pods. -->
+    ```bash
+    kubectl apply -f kubernetes/
+    ```
+    <!-- This will create the Deployment Pods and Service. -->
 
 3. **Verify the Deployment:**
 
-```bash
-kubectl get pods
-kubectl get service hello-k8s-service
-```
+    ```bash
+    kubectl get pods
+    kubectl get service hello-k8s-service
+    ```
 
-Then, try and get the pod with the label `demo`:
-<!-- lables -->
+Then, try and get the pod using the label `app=hello-k8s` or `demo`:
+<!-- Labels -->
 ![alt text](image.png)
 
 We can also view our annotatins, by describing the deployment:
